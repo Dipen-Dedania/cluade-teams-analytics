@@ -32,7 +32,8 @@ All powered by your own export. No cloud. No API keys. No data sent anywhere.
 
 ## Demo
 
-<video src="./demo.mp4" controls></video>
+<video src="https://github.com/Dipen-Dedania/cluade-teams-analytics/blob/main/demo.mp4?raw=true" controls="controls" style="max-width: 100%;">
+</video>
 
 ## 📸 How to Export Your Claude Teams Data
 
