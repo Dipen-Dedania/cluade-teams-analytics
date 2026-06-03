@@ -1,0 +1,31 @@
+{
+    "uuid": "00000000-0000-4000-8000-000000000001",
+    "title": "Sample Chat",
+    "project": {
+        "uuid": "proj-0001",
+        "name": "Sample Project"
+    },
+    "created_at": "2026-05-20T12:00:00.000Z",
+    "updated_at": "2026-05-20T12:05:00.000Z",
+    "messages": [
+        {
+            "uuid": "msg-0001",
+            "role": "user",
+            "content": {
+                "role": "user",
+                "content": "Please create a transparent video without changing keyframes.",
+                "attachments": []
+            },
+            "created_at": "2026-05-20T12:00:10.000Z"
+        },
+        {
+            "uuid": "msg-0002",
+            "role": "assistant",
+            "content": {
+                "role": "assistant",
+                "content": "Sure — I will produce options and keep duration."
+            },
+            "created_at": "2026-05-20T12:02:00.000Z"
+        }
+    ]
+}

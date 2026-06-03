@@ -1,0 +1,20 @@
+{
+    "uuid": "proj-0004",
+    "name": "Global Expansion Initiative",
+    "description": "Internationalisation project to support vi-VN, de-DE, fr-FR, pt-BR, ko-KR, and sv-SE locales.",
+    "created_at": "2026-04-15T10:00:00.000Z",
+    "updated_at": "2026-05-18T14:00:00.000Z",
+    "creator": { "full_name": "Isabelle Martin", "uuid": "99999999-9999-4999-8999-999999999999" },
+    "is_private": false,
+    "is_starter_project": false,
+    "prompt_template": "You are a localisation engineer. Use i18next conventions, ISO 639-1 locale codes, and always use Intl APIs for date, number, and currency formatting.",
+    "docs": [
+        { "filename": "locale-matrix.md", "content": "Supported locales, RTL flags, date format patterns, currency codes" },
+        { "filename": "translation-guidelines.md", "content": "Style guide for translators: tone, terminology glossary, character limits" }
+    ],
+    "metadata": {
+        "owner": "99999999-9999-4999-8999-999999999999",
+        "target_launch": "2026-07-01",
+        "locales": ["vi-VN", "de-DE", "fr-FR", "pt-BR", "ko-KR", "sv-SE"]
+    }
+}

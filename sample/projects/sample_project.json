@@ -1,0 +1,18 @@
+{
+    "uuid": "proj-0001",
+    "name": "Sample Project",
+    "description": "A sample project used for analytics demo",
+    "created_at": "2026-05-15T09:30:00.000Z",
+    "updated_at": "2026-05-20T12:00:00.000Z",
+    "creator": { "full_name": "Alice Example", "uuid": "11111111-1111-4111-8111-111111111111" },
+    "is_private": false,
+    "is_starter_project": true,
+    "prompt_template": "Write a brief summary of the project goals...",
+    "docs": [
+        { "filename": "README.md", "content": "Project README - overview and goals" },
+        { "filename": "spec.md", "content": "Spec: metrics and exports" }
+    ],
+    "metadata": {
+        "owner": "11111111-1111-4111-8111-111111111111"
+    }
+}

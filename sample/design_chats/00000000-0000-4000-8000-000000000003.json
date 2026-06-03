@@ -1,0 +1,47 @@
+{
+    "uuid": "00000000-0000-4000-8000-000000000003",
+    "title": "Brand Refresh - Logo Concepts",
+    "project": { "uuid": "proj-0002", "name": "Brand Redesign 2026" },
+    "created_at": "2026-05-10T11:00:00.000Z",
+    "updated_at": "2026-05-10T11:30:00.000Z",
+    "messages": [
+        {
+            "uuid": "msg-2001",
+            "role": "user",
+            "content": {
+                "role": "user",
+                "content": "Generate 3 logo concept variations for the brand refresh. Keep the existing colour palette but modernise the mark.",
+                "attachments": [{ "id": "att-logo-1", "name": "current-logo.svg", "type": "image/svg+xml" }]
+            },
+            "created_at": "2026-05-10T11:00:10.000Z"
+        },
+        {
+            "uuid": "msg-2002",
+            "role": "assistant",
+            "content": {
+                "role": "assistant",
+                "content": "Here are 3 logo concepts: (A) geometric minimal mark, (B) wordmark with custom ligature, (C) icon + wordmark lockup."
+            },
+            "created_at": "2026-05-10T11:15:00.000Z"
+        },
+        {
+            "uuid": "msg-2003",
+            "role": "user",
+            "content": {
+                "role": "user",
+                "content": "Option B looks great. Can you refine the kerning and export in SVG and PNG at 2x?",
+                "attachments": []
+            },
+            "created_at": "2026-05-10T11:20:00.000Z"
+        },
+        {
+            "uuid": "msg-2004",
+            "role": "assistant",
+            "content": {
+                "role": "assistant",
+                "content": "Kerning refined and assets exported: logo-B.svg and logo-B@2x.png are ready for download."
+            },
+            "created_at": "2026-05-10T11:28:00.000Z"
+        }
+    ]
+}

@@ -1,0 +1,347 @@
+[
+    {
+        "uuid": "conv-0001-1111-4444-0001",
+        "account": { "uuid": "11111111-1111-4111-8111-111111111111" },
+        "name": "Onboarding - Alice",
+        "summary": "Welcome and onboarding questions",
+        "created_at": "2026-05-01T09:00:00.000Z",
+        "updated_at": "2026-05-01T09:10:00.000Z",
+        "chat_messages": [
+            {
+                "uuid": "cm-0001",
+                "sender": "human",
+                "created_at": "2026-05-01T09:00:00.000Z",
+                "text": "Welcome to the workspace! Let me know if you need access to any projects.",
+                "content": [{ "type": "text", "text": "Welcome to the workspace!" }]
+            },
+            {
+                "uuid": "cm-0002",
+                "sender": "assistant",
+                "created_at": "2026-05-01T09:01:00.000Z",
+                "text": "Thanks — I've granted you access to the sample project.",
+                "content": [{ "type": "text", "text": "Thanks — I've granted you access." }]
+            }
+        ]
+    },
+    {
+        "uuid": "conv-0002-2222-4444-0002",
+        "account": { "uuid": "22222222-2222-4222-8222-222222222222" },
+        "name": "Feature discussion - Bob",
+        "summary": "Discuss new dashboard feature and data exports",
+        "created_at": "2026-05-01T11:15:00.000Z",
+        "updated_at": "2026-05-01T12:05:00.000Z",
+        "chat_messages": [
+            {
+                "uuid": "cm-1001",
+                "sender": "human",
+                "created_at": "2026-05-01T11:15:00.000Z",
+                "text": "We're going to add CSV export and a metrics page. Can you draft requirements?",
+                "content": [{ "type": "text", "text": "We're going to add CSV export and a metrics page." }]
+            },
+            {
+                "uuid": "cm-1002",
+                "sender": "assistant",
+                "created_at": "2026-05-01T11:30:00.000Z",
+                "text": "Draft created: see attached requirements.pdf",
+                "content": [
+                    { "type": "text", "text": "Draft created" },
+                    { "type": "tool_result", "text": "requirements.pdf", "id": "file-req-1" }
+                ],
+                "files": [{ "file_name": "requirements.pdf", "file_type": "pdf", "file_size": 14200 }]
+            }
+        ]
+    },
+    {
+        "uuid": "conv-0006-6666-4444-0006",
+        "account": { "uuid": "66666666-6666-4666-8666-666666666666" },
+        "name": "Sprint planning - Frank",
+        "summary": "Sprint 12 planning session and backlog grooming",
+        "created_at": "2026-05-01T14:00:00.000Z",
+        "updated_at": "2026-05-01T14:45:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-5001", "sender": "human", "created_at": "2026-05-01T14:00:00.000Z", "text": "Let's plan Sprint 12. We need to prioritize the auth module and reporting dashboard.", "content": [{ "type": "text", "text": "Let's plan Sprint 12 priorities." }] },
+            { "uuid": "cm-5002", "sender": "assistant", "created_at": "2026-05-01T14:08:00.000Z", "text": "Sprint 12 plan created with 14 story points. Auth module is top priority.", "content": [{ "type": "text", "text": "Sprint 12 plan created with 14 story points." }] },
+            { "uuid": "cm-5003", "sender": "human", "created_at": "2026-05-01T14:15:00.000Z", "text": "Can you also add a stretch goal for mobile responsiveness?", "content": [{ "type": "text", "text": "Add stretch goal for mobile responsiveness." }] },
+            { "uuid": "cm-5004", "sender": "assistant", "created_at": "2026-05-01T14:20:00.000Z", "text": "Stretch goal added. Total: 14 committed + 5 stretch story points.", "content": [{ "type": "text", "text": "Stretch goal added. Total: 19 story points." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0003-3333-4444-0003",
+        "account": { "uuid": "33333333-3333-4333-8333-333333333333" },
+        "name": "Design feedback - Carol",
+        "summary": "Review hero image and prototype interactions",
+        "created_at": "2026-05-02T14:20:00.000Z",
+        "updated_at": "2026-05-02T14:40:00.000Z",
+        "chat_messages": [
+            {
+                "uuid": "cm-2001",
+                "sender": "human",
+                "created_at": "2026-05-02T14:20:00.000Z",
+                "text": "Can we make the hero image full bleed and add subtle animation?",
+                "content": [{ "type": "text", "text": "Can we make the hero image full bleed?" }],
+                "attachments": [{ "id": "att-1", "name": "hero.png", "type": "image/png" }]
+            },
+            {
+                "uuid": "cm-2002",
+                "sender": "assistant",
+                "created_at": "2026-05-02T14:35:10.000Z",
+                "text": "Prototype options uploaded.",
+                "content": [
+                    { "type": "text", "text": "Prototype options" },
+                    { "type": "tool_use", "text": "generate_prototype" }
+                ],
+                "files": [{ "file_name": "prototype.zip", "file_type": "zip", "file_size": 512000 }]
+            }
+        ]
+    },
+    {
+        "uuid": "conv-0005-5555-4444-0005",
+        "account": { "uuid": "55555555-5555-4555-8555-555555555555" },
+        "name": "API integration - Eve",
+        "summary": "Discussing REST API integration with third-party analytics provider",
+        "created_at": "2026-05-05T08:30:00.000Z",
+        "updated_at": "2026-05-05T09:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-4001", "sender": "human", "created_at": "2026-05-05T08:30:00.000Z", "text": "Can you help me integrate the Mixpanel API for event tracking?", "content": [{ "type": "text", "text": "Can you help me integrate the Mixpanel API?" }] },
+            { "uuid": "cm-4002", "sender": "assistant", "created_at": "2026-05-05T08:40:00.000Z", "text": "Sure! Here's the setup guide and sample code snippet.", "content": [{ "type": "text", "text": "Here's the setup guide and sample code." }] },
+            { "uuid": "cm-4003", "sender": "human", "created_at": "2026-05-05T08:50:00.000Z", "text": "Great, I also need to handle webhook events.", "content": [{ "type": "text", "text": "I also need to handle webhook events." }] },
+            { "uuid": "cm-4004", "sender": "assistant", "created_at": "2026-05-05T09:05:00.000Z", "text": "Added webhook handler example with signature verification.", "content": [{ "type": "text", "text": "Added webhook handler with signature verification." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0007-7777-4444-0007",
+        "account": { "uuid": "77777777-7777-4777-8777-777777777777" },
+        "name": "Code review - Grace",
+        "summary": "Code review for authentication middleware",
+        "created_at": "2026-05-05T10:00:00.000Z",
+        "updated_at": "2026-05-05T11:20:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-6001", "sender": "human", "created_at": "2026-05-05T10:00:00.000Z", "text": "Please review the JWT middleware implementation.", "content": [{ "type": "text", "text": "Review JWT middleware implementation." }], "attachments": [{ "id": "att-5", "name": "middleware.ts", "type": "text/typescript" }] },
+            { "uuid": "cm-6002", "sender": "assistant", "created_at": "2026-05-05T10:15:00.000Z", "text": "Found 2 issues: token expiry not validated, and refresh endpoint lacks rate limiting.", "content": [{ "type": "text", "text": "Found 2 issues in the middleware." }] },
+            { "uuid": "cm-6003", "sender": "human", "created_at": "2026-05-05T10:30:00.000Z", "text": "Fixed both. Here's the updated file.", "content": [{ "type": "text", "text": "Fixed both issues." }], "attachments": [{ "id": "att-6", "name": "middleware-v2.ts", "type": "text/typescript" }] },
+            { "uuid": "cm-6004", "sender": "assistant", "created_at": "2026-05-05T10:45:00.000Z", "text": "Looks good! LGTM — approved for merge.", "content": [{ "type": "text", "text": "LGTM — approved for merge." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0010-aaaa-4444-0010",
+        "account": { "uuid": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa" },
+        "name": "Infrastructure setup - James",
+        "summary": "Setting up cloud infrastructure for new service",
+        "created_at": "2026-05-05T13:30:00.000Z",
+        "updated_at": "2026-05-05T15:00:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-9001", "sender": "human", "created_at": "2026-05-05T13:30:00.000Z", "text": "Help me configure a GCP project with Terraform for our new data service.", "content": [{ "type": "text", "text": "Configure GCP project with Terraform." }] },
+            { "uuid": "cm-9002", "sender": "assistant", "created_at": "2026-05-05T13:50:00.000Z", "text": "Here's the Terraform module for GCP — includes VPC, Cloud SQL, and IAM roles.", "content": [{ "type": "text", "text": "Terraform module ready." }], "files": [{ "file_name": "main.tf", "file_type": "tf", "file_size": 8450 }] },
+            { "uuid": "cm-9003", "sender": "human", "created_at": "2026-05-05T14:15:00.000Z", "text": "Apply failed on IAM binding. Getting 403.", "content": [{ "type": "text", "text": "Terraform apply failed — IAM 403." }] },
+            { "uuid": "cm-9004", "sender": "assistant", "created_at": "2026-05-05T14:30:00.000Z", "text": "Your service account needs 'resourcemanager.projects.setIamPolicy'. Grant it at the org level.", "content": [{ "type": "text", "text": "Grant 'setIamPolicy' at org level." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0016-abab-4444-0016",
+        "account": { "uuid": "abababab-abab-4aba-8aba-abababababab" },
+        "name": "User research synthesis - Pedro",
+        "summary": "Synthesizing user interview notes into actionable insights",
+        "created_at": "2026-05-05T15:30:00.000Z",
+        "updated_at": "2026-05-05T16:50:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-f001", "sender": "human", "created_at": "2026-05-05T15:30:00.000Z", "text": "Here are 8 user interview transcripts. Please synthesize the key themes.", "content": [{ "type": "text", "text": "Synthesize themes from 8 interview transcripts." }], "attachments": [{ "id": "att-10", "name": "interviews.zip", "type": "application/zip" }] },
+            { "uuid": "cm-f002", "sender": "assistant", "created_at": "2026-05-05T15:55:00.000Z", "text": "Top 3 themes: (1) users struggle with onboarding, (2) reporting is the most valued feature, (3) mobile support is heavily requested.", "content": [{ "type": "text", "text": "3 key themes identified from interviews." }] },
+            { "uuid": "cm-f003", "sender": "human", "created_at": "2026-05-05T16:15:00.000Z", "text": "Can you create an affinity diagram from these?", "content": [{ "type": "text", "text": "Create affinity diagram." }] },
+            { "uuid": "cm-f004", "sender": "assistant", "created_at": "2026-05-05T16:40:00.000Z", "text": "Affinity diagram created with 5 clusters. Exported as PDF.", "content": [{ "type": "text", "text": "Affinity diagram exported as PDF." }], "files": [{ "file_name": "affinity-diagram.pdf", "file_type": "pdf", "file_size": 18900 }] }
+        ]
+    },
+    {
+        "uuid": "conv-0008-8888-4444-0008",
+        "account": { "uuid": "88888888-8888-4888-8888-888888888888" },
+        "name": "Data pipeline - Henry",
+        "summary": "Troubleshoot ETL pipeline failures in production",
+        "created_at": "2026-05-06T08:00:00.000Z",
+        "updated_at": "2026-05-06T09:45:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-7001", "sender": "human", "created_at": "2026-05-06T08:00:00.000Z", "text": "The nightly ETL job is failing with a schema mismatch error.", "content": [{ "type": "text", "text": "ETL job failing — schema mismatch." }] },
+            { "uuid": "cm-7002", "sender": "assistant", "created_at": "2026-05-06T08:12:00.000Z", "text": "The upstream source added a new column 'region_code'. Add it to your schema and re-run.", "content": [{ "type": "text", "text": "New column 'region_code' causing mismatch." }] },
+            { "uuid": "cm-7003", "sender": "human", "created_at": "2026-05-06T08:30:00.000Z", "text": "Added the column. Re-running now.", "content": [{ "type": "text", "text": "Column added. Re-running." }] },
+            { "uuid": "cm-7004", "sender": "assistant", "created_at": "2026-05-06T09:00:00.000Z", "text": "Pipeline completed successfully. 1.2 M rows processed.", "content": [{ "type": "text", "text": "Pipeline succeeded — 1.2M rows processed." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0011-bbbb-4444-0011",
+        "account": { "uuid": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb" },
+        "name": "Accessibility audit - Kira",
+        "summary": "Accessibility review and WCAG 2.1 compliance check",
+        "created_at": "2026-05-06T10:00:00.000Z",
+        "updated_at": "2026-05-06T11:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-a001", "sender": "human", "created_at": "2026-05-06T10:00:00.000Z", "text": "Run an accessibility audit on our dashboard and list WCAG 2.1 AA violations.", "content": [{ "type": "text", "text": "Accessibility audit on dashboard." }] },
+            { "uuid": "cm-a002", "sender": "assistant", "created_at": "2026-05-06T10:20:00.000Z", "text": "Found 7 violations: missing alt text, low contrast ratios, and missing focus indicators.", "content": [{ "type": "text", "text": "7 WCAG 2.1 violations found." }] },
+            { "uuid": "cm-a003", "sender": "human", "created_at": "2026-05-06T10:45:00.000Z", "text": "Please provide the fix recommendations for each.", "content": [{ "type": "text", "text": "Provide fix recommendations." }] },
+            { "uuid": "cm-a004", "sender": "assistant", "created_at": "2026-05-06T11:00:00.000Z", "text": "Recommendations documented. Priority fixes: contrast ratio on nav bar and alt text for chart images.", "content": [{ "type": "text", "text": "Fix recommendations documented." }], "files": [{ "file_name": "a11y-report.pdf", "file_type": "pdf", "file_size": 22100 }] }
+        ]
+    },
+    {
+        "uuid": "conv-0014-eeee-4444-0014",
+        "account": { "uuid": "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee" },
+        "name": "Security review - Noah",
+        "summary": "Security vulnerability assessment and patch recommendations",
+        "created_at": "2026-05-06T13:00:00.000Z",
+        "updated_at": "2026-05-06T14:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-d001", "sender": "human", "created_at": "2026-05-06T13:00:00.000Z", "text": "We received a pentest report with 3 critical findings. Can you help triage them?", "content": [{ "type": "text", "text": "Triage 3 critical pentest findings." }], "attachments": [{ "id": "att-9", "name": "pentest-report.pdf", "type": "application/pdf" }] },
+            { "uuid": "cm-d002", "sender": "assistant", "created_at": "2026-05-06T13:20:00.000Z", "text": "Triaged: (1) SQLi via unsanitized input — patch immediately. (2) Stored XSS in comments — encode output. (3) Missing CSRF tokens — add SameSite cookies.", "content": [{ "type": "text", "text": "3 findings triaged with remediation steps." }] },
+            { "uuid": "cm-d003", "sender": "human", "created_at": "2026-05-06T14:00:00.000Z", "text": "Patches applied. Can you draft a remediation summary for the client?", "content": [{ "type": "text", "text": "Draft remediation summary for client." }] },
+            { "uuid": "cm-d004", "sender": "assistant", "created_at": "2026-05-06T14:20:00.000Z", "text": "Remediation summary drafted and ready to send.", "content": [{ "type": "text", "text": "Remediation summary drafted." }], "files": [{ "file_name": "remediation-summary.docx", "file_type": "docx", "file_size": 31500 }] }
+        ]
+    },
+    {
+        "uuid": "conv-0019-1212-4444-0019",
+        "account": { "uuid": "12121212-1212-4121-8121-121212121212" },
+        "name": "Cloud cost optimisation - Sam",
+        "summary": "Review and reduce AWS monthly spend",
+        "created_at": "2026-05-06T15:30:00.000Z",
+        "updated_at": "2026-05-06T17:00:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-i001", "sender": "human", "created_at": "2026-05-06T15:30:00.000Z", "text": "Our AWS bill jumped to $18K last month. Can you help identify waste?", "content": [{ "type": "text", "text": "AWS bill jumped to $18K — identify waste." }], "attachments": [{ "id": "att-11", "name": "aws-cost-report.csv", "type": "text/csv" }] },
+            { "uuid": "cm-i002", "sender": "assistant", "created_at": "2026-05-06T15:50:00.000Z", "text": "Top savings: (1) 6 idle EC2 instances — $2,400/mo. (2) Oversized RDS — downgrade saves $1,800/mo. (3) Old S3 snapshots — $600/mo.", "content": [{ "type": "text", "text": "Identified $4,800/mo in potential savings." }] },
+            { "uuid": "cm-i003", "sender": "human", "created_at": "2026-05-06T16:15:00.000Z", "text": "Apply Reserved Instance pricing to the top 5 instances.", "content": [{ "type": "text", "text": "Apply Reserved Instance pricing." }] },
+            { "uuid": "cm-i004", "sender": "assistant", "created_at": "2026-05-06T16:40:00.000Z", "text": "Reserved pricing applied. Projected monthly savings: $5,200.", "content": [{ "type": "text", "text": "Reserved pricing applied — $5,200/mo savings." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0009-9999-4444-0009",
+        "account": { "uuid": "99999999-9999-4999-8999-999999999999" },
+        "name": "Marketing copy - Isabelle",
+        "summary": "Generate product launch marketing copy in French",
+        "created_at": "2026-05-07T10:00:00.000Z",
+        "updated_at": "2026-05-07T10:50:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-8001", "sender": "human", "created_at": "2026-05-07T10:00:00.000Z", "text": "Write a product launch email for our analytics platform, targeted at French enterprises.", "content": [{ "type": "text", "text": "Write product launch email for French enterprises." }] },
+            { "uuid": "cm-8002", "sender": "assistant", "created_at": "2026-05-07T10:15:00.000Z", "text": "Email draft ready — subject: 'Découvrez notre plateforme d'analyse nouvelle génération'", "content": [{ "type": "text", "text": "Email draft ready in French." }] },
+            { "uuid": "cm-8003", "sender": "human", "created_at": "2026-05-07T10:30:00.000Z", "text": "Can you make it more concise and add a strong CTA?", "content": [{ "type": "text", "text": "Make it concise with a strong CTA." }] },
+            { "uuid": "cm-8004", "sender": "assistant", "created_at": "2026-05-07T10:45:00.000Z", "text": "Updated. CTA added: 'Demandez une démo gratuite aujourd'hui.'", "content": [{ "type": "text", "text": "Updated with CTA." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0004-4444-4444-0004",
+        "account": { "uuid": "11111111-1111-4111-8111-111111111111" },
+        "name": "Quick question - Alice",
+        "summary": "Short clarifying question about report ETA",
+        "created_at": "2026-05-08T08:00:00.000Z",
+        "updated_at": "2026-05-08T08:00:30.000Z",
+        "chat_messages": [
+            { "uuid": "cm-3001", "sender": "human", "created_at": "2026-05-08T08:00:00.000Z", "text": "What's the ETA on the report?", "content": [{ "type": "text", "text": "What's the ETA on the report?" }] },
+            { "uuid": "cm-3002", "sender": "assistant", "created_at": "2026-05-08T08:00:25.000Z", "text": "ETA is EOD tomorrow.", "content": [{ "type": "text", "text": "ETA is EOD tomorrow." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0013-dddd-4444-0013",
+        "account": { "uuid": "dddddddd-dddd-4ddd-8ddd-dddddddddddd" },
+        "name": "Localization - Mia",
+        "summary": "Adding Vietnamese locale support to the app",
+        "created_at": "2026-05-08T09:00:00.000Z",
+        "updated_at": "2026-05-08T10:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-c001", "sender": "human", "created_at": "2026-05-08T09:00:00.000Z", "text": "We need to add Vietnamese (vi-VN) locale. Where do I start?", "content": [{ "type": "text", "text": "Add Vietnamese locale support." }] },
+            { "uuid": "cm-c002", "sender": "assistant", "created_at": "2026-05-08T09:15:00.000Z", "text": "Create a vi.json translation file, add it to i18next config, and set RTL to false for Vietnamese.", "content": [{ "type": "text", "text": "Create vi.json and update i18next config." }] },
+            { "uuid": "cm-c003", "sender": "human", "created_at": "2026-05-08T09:45:00.000Z", "text": "Done. Date formatting looks off for vi-VN.", "content": [{ "type": "text", "text": "Date formatting issue for vi-VN." }] },
+            { "uuid": "cm-c004", "sender": "assistant", "created_at": "2026-05-08T10:00:00.000Z", "text": "Use Intl.DateTimeFormat with locale 'vi-VN'. Example: new Intl.DateTimeFormat('vi-VN').format(date).", "content": [{ "type": "text", "text": "Use Intl.DateTimeFormat('vi-VN')." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0012-cccc-4444-0012",
+        "account": { "uuid": "cccccccc-cccc-4ccc-8ccc-cccccccccccc" },
+        "name": "Performance tuning - Liam",
+        "summary": "Database query optimization for slow reports",
+        "created_at": "2026-05-12T09:00:00.000Z",
+        "updated_at": "2026-05-12T10:45:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-b001", "sender": "human", "created_at": "2026-05-12T09:00:00.000Z", "text": "Our monthly report query takes 45 seconds. Can you help optimize it?", "content": [{ "type": "text", "text": "Optimize slow monthly report query." }] },
+            { "uuid": "cm-b002", "sender": "assistant", "created_at": "2026-05-12T09:15:00.000Z", "text": "The query is missing a composite index on (user_id, created_at). Adding it should reduce time by 90%.", "content": [{ "type": "text", "text": "Missing composite index found." }] },
+            { "uuid": "cm-b003", "sender": "human", "created_at": "2026-05-12T10:00:00.000Z", "text": "Added the index. Down to 4 seconds now!", "content": [{ "type": "text", "text": "Index added — now 4 seconds." }] },
+            { "uuid": "cm-b004", "sender": "assistant", "created_at": "2026-05-12T10:10:00.000Z", "text": "Great improvement! Consider also partitioning the table by month for queries above 6 months.", "content": [{ "type": "text", "text": "Consider table partitioning for long range queries." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0017-cdcd-4444-0017",
+        "account": { "uuid": "cdcdcdcd-cdcd-4cdc-8cdc-cdcdcdcdcdcd" },
+        "name": "Test automation - Quinn",
+        "summary": "Setting up end-to-end test suite with Playwright",
+        "created_at": "2026-05-12T11:30:00.000Z",
+        "updated_at": "2026-05-12T13:00:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-g001", "sender": "human", "created_at": "2026-05-12T11:30:00.000Z", "text": "Help me set up Playwright for E2E testing on our Next.js app.", "content": [{ "type": "text", "text": "Set up Playwright for Next.js E2E testing." }] },
+            { "uuid": "cm-g002", "sender": "assistant", "created_at": "2026-05-12T11:45:00.000Z", "text": "Installed Playwright and scaffolded tests for login, dashboard, and report export flows.", "content": [{ "type": "text", "text": "Playwright tests scaffolded." }] },
+            { "uuid": "cm-g003", "sender": "human", "created_at": "2026-05-12T12:15:00.000Z", "text": "Tests fail in CI due to missing headless config.", "content": [{ "type": "text", "text": "Tests fail in CI — headless config issue." }] },
+            { "uuid": "cm-g004", "sender": "assistant", "created_at": "2026-05-12T12:30:00.000Z", "text": "Set `headless: true` and `--no-sandbox` in CI environment config. Updated playwright.config.ts.", "content": [{ "type": "text", "text": "Fixed headless config for CI." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0021-5656-4444-0021",
+        "account": { "uuid": "56565656-5656-4565-8565-565656565656" },
+        "name": "ML model review - Uma",
+        "summary": "Evaluate model accuracy and bias metrics",
+        "created_at": "2026-05-12T14:00:00.000Z",
+        "updated_at": "2026-05-12T15:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-k001", "sender": "human", "created_at": "2026-05-12T14:00:00.000Z", "text": "Review our churn prediction model — accuracy is 78% but bias metrics look off.", "content": [{ "type": "text", "text": "Review churn model for bias." }], "attachments": [{ "id": "att-12", "name": "model-metrics.csv", "type": "text/csv" }] },
+            { "uuid": "cm-k002", "sender": "assistant", "created_at": "2026-05-12T14:20:00.000Z", "text": "Bias found: model under-predicts churn for users aged 18-25 by 22%. Recommend oversampling this cohort.", "content": [{ "type": "text", "text": "Bias identified — recommend oversampling 18-25 cohort." }] },
+            { "uuid": "cm-k003", "sender": "human", "created_at": "2026-05-12T14:50:00.000Z", "text": "Retrained with SMOTE. New accuracy: 83%. Bias gap down to 7%.", "content": [{ "type": "text", "text": "Retrained with SMOTE — 83% accuracy." }] },
+            { "uuid": "cm-k004", "sender": "assistant", "created_at": "2026-05-12T15:10:00.000Z", "text": "Excellent improvement! Recommend adding fairness monitoring to the model registry.", "content": [{ "type": "text", "text": "Add fairness monitoring to model registry." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0015-ffff-4444-0015",
+        "account": { "uuid": "ffffffff-ffff-4fff-8fff-ffffffffffff" },
+        "name": "Analytics dashboard - Olivia",
+        "summary": "Building a real-time analytics dashboard",
+        "created_at": "2026-05-13T10:00:00.000Z",
+        "updated_at": "2026-05-13T11:45:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-e001", "sender": "human", "created_at": "2026-05-13T10:00:00.000Z", "text": "I need a real-time dashboard with live user counts and event rates.", "content": [{ "type": "text", "text": "Real-time dashboard with live user counts." }] },
+            { "uuid": "cm-e002", "sender": "assistant", "created_at": "2026-05-13T10:20:00.000Z", "text": "Use WebSockets for live data push. I'll scaffold a React dashboard with Chart.js.", "content": [{ "type": "text", "text": "Scaffold React dashboard with WebSockets." }] },
+            { "uuid": "cm-e003", "sender": "human", "created_at": "2026-05-13T11:00:00.000Z", "text": "The chart flickers on update. How to fix?", "content": [{ "type": "text", "text": "Chart flickers on update." }] },
+            { "uuid": "cm-e004", "sender": "assistant", "created_at": "2026-05-13T11:20:00.000Z", "text": "Use chart.update('none') to disable animation on incremental updates.", "content": [{ "type": "text", "text": "Use chart.update('none') to stop flicker." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0020-3434-4444-0020",
+        "account": { "uuid": "34343434-3434-4343-8343-343434343434" },
+        "name": "Content calendar - Tina",
+        "summary": "Generate a monthly content calendar for social media",
+        "created_at": "2026-05-13T13:00:00.000Z",
+        "updated_at": "2026-05-13T14:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-j001", "sender": "human", "created_at": "2026-05-13T13:00:00.000Z", "text": "Create a content calendar for June 2026, focusing on product updates and thought leadership.", "content": [{ "type": "text", "text": "Create June 2026 content calendar." }] },
+            { "uuid": "cm-j002", "sender": "assistant", "created_at": "2026-05-13T13:20:00.000Z", "text": "Calendar created: 4 product update posts, 8 thought leadership articles, 12 social snippets.", "content": [{ "type": "text", "text": "Content calendar with 24 items created." }], "files": [{ "file_name": "content-calendar-june.xlsx", "file_type": "xlsx", "file_size": 28700 }] },
+            { "uuid": "cm-j003", "sender": "human", "created_at": "2026-05-13T13:45:00.000Z", "text": "Write 3 post captions for the product update posts.", "content": [{ "type": "text", "text": "Write 3 product update post captions." }] },
+            { "uuid": "cm-j004", "sender": "assistant", "created_at": "2026-05-13T14:10:00.000Z", "text": "Captions written for LinkedIn, X, and Instagram with tailored tone for each platform.", "content": [{ "type": "text", "text": "3 captions tailored per platform." }] }
+        ]
+    },
+    {
+        "uuid": "conv-0018-efef-4444-0018",
+        "account": { "uuid": "efefefef-efef-4efe-8efe-efefefefefef" },
+        "name": "Grant proposal - Rachel",
+        "summary": "Drafting a tech grant proposal for government submission",
+        "created_at": "2026-05-19T10:00:00.000Z",
+        "updated_at": "2026-05-19T12:00:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-h001", "sender": "human", "created_at": "2026-05-19T10:00:00.000Z", "text": "Help me write a 1000-word grant proposal for a software training program.", "content": [{ "type": "text", "text": "Write 1000-word grant proposal for software training." }] },
+            { "uuid": "cm-h002", "sender": "assistant", "created_at": "2026-05-19T10:20:00.000Z", "text": "Draft written. Covers objectives, target beneficiaries, outcomes, and budget summary.", "content": [{ "type": "text", "text": "Grant proposal draft ready." }], "files": [{ "file_name": "grant-proposal-v1.docx", "file_type": "docx", "file_size": 45200 }] },
+            { "uuid": "cm-h003", "sender": "human", "created_at": "2026-05-19T11:00:00.000Z", "text": "Strengthen the impact section and add data on digital skills gap in Ghana.", "content": [{ "type": "text", "text": "Strengthen impact section with Ghana digital skills data." }] },
+            { "uuid": "cm-h004", "sender": "assistant", "created_at": "2026-05-19T11:30:00.000Z", "text": "Revised with UNESCO and World Bank data on digital literacy in Sub-Saharan Africa.", "content": [{ "type": "text", "text": "Impact section strengthened with UNESCO/World Bank data." }], "files": [{ "file_name": "grant-proposal-v2.docx", "file_type": "docx", "file_size": 52000 }] }
+        ]
+    },
+    {
+        "uuid": "conv-0022-7878-4444-0022",
+        "account": { "uuid": "78787878-7878-4787-8787-787878787878" },
+        "name": "API docs - Victor",
+        "summary": "Generate OpenAPI documentation for REST endpoints",
+        "created_at": "2026-05-22T09:00:00.000Z",
+        "updated_at": "2026-05-22T10:30:00.000Z",
+        "chat_messages": [
+            { "uuid": "cm-l001", "sender": "human", "created_at": "2026-05-22T09:00:00.000Z", "text": "Generate OpenAPI 3.0 spec for our authentication and reporting endpoints.", "content": [{ "type": "text", "text": "Generate OpenAPI 3.0 spec." }] },
+            { "uuid": "cm-l002", "sender": "assistant", "created_at": "2026-05-22T09:20:00.000Z", "text": "OpenAPI spec generated — 12 endpoints documented with request/response schemas.", "content": [{ "type": "text", "text": "OpenAPI spec with 12 endpoints ready." }], "files": [{ "file_name": "openapi.yaml", "file_type": "yaml", "file_size": 19200 }] },
+            { "uuid": "cm-l003", "sender": "human", "created_at": "2026-05-22T09:45:00.000Z", "text": "Add error response schemas for 401 and 403 to all endpoints.", "content": [{ "type": "text", "text": "Add 401 and 403 error schemas." }] },
+            { "uuid": "cm-l004", "sender": "assistant", "created_at": "2026-05-22T10:10:00.000Z", "text": "Error schemas added globally via components/responses. All 12 endpoints now reference them.", "content": [{ "type": "text", "text": "Error schemas added to all 12 endpoints." }], "files": [{ "file_name": "openapi-v2.yaml", "file_type": "yaml", "file_size": 23500 }] }
+        ]
+    }
+]

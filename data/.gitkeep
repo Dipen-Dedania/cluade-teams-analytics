@@ -1,0 +1,13 @@
+# Place your Claude Teams export files here.
+#
+# Expected structure:
+#   data/conversations.json   ← required
+#   data/users.json           ← required
+#   data/memories.json        ← optional
+#   data/projects/*.json      ← optional
+#   data/design_chats/*.json  ← optional
+#
+# This folder and its contents are gitignored.
+# Only this placeholder file is tracked to preserve the empty directory.
+#
+# See README.md → "How to Export Your Claude Teams Data" for step-by-step instructions.

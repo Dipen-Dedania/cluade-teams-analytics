@@ -1,224 +1,246 @@
-# Claude Teams Analytics
+<div align="center">
 
-A local analytics dashboard for Claude Teams export data.
+# 📊 Claude Teams Analytics
 
-This project turns a Claude Teams export into a fast, browsable React dashboard with team-level, user-level, project-level, file, topic, and conversation insights that are not always visible in Claude's built-in analytics tab.
+**A local, privacy-first analytics dashboard for your Claude Teams export data.**
 
-The app is designed to run locally against your exported data. It does not send chat content to an external service.
+Turn raw Claude Teams exports into a fast, beautiful, and fully interactive dashboard — running entirely on your machine. No data leaves your system.
 
-## What It Shows
+[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-brightgreen?logo=node.js&logoColor=white)](https://nodejs.org)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/Dipen-Dedania/cluade-teams-analytics/pulls)
+[![Stars](https://img.shields.io/github/stars/Dipen-Dedania/cluade-teams-analytics?style=social)](https://github.com/Dipen-Dedania/cluade-teams-analytics/stargazers)
 
-- Team usage overview
-- Active and inactive users
-- Weekend usage
-- User-level drilldowns
-- Conversation history per user
-- Full conversation message viewer
-- Topic/theme detection
-- Project and design chat summaries
-- File/upload analytics
-- Tool-use, tool-result, thinking, and token-budget block counts
-- Daily, hourly, and weekday usage patterns
+</div>
 
-## Project Structure
+---
 
-```text
-data/
-  conversations.json
-  users.json
-  memories.json
-  projects/
-  design_chats/
+## ✨ Why This Exists
 
-scripts/
-  analyze.mjs
-  serve.mjs
+Claude's built-in usage tab shows you billing and seat counts. This project shows you **everything else**:
 
-src/
-  main.jsx
-  styles.css
+- Which users are most active — and which have gone quiet
+- What topics your team is working on
+- When your team works (hourly heatmaps, weekday patterns)
+- Which files get uploaded most often
+- Full conversation history with message-level detail
+- Tool-use and thinking-block counts per conversation
 
-public/generated/
-  analytics.json
-  conversations/
-    {conversationUuid}.json
+All powered by your own export. No cloud. No API keys. No data sent anywhere.
 
-dist/
-```
+## Demo
 
-## How Data Flows
+![Demo](demo.mp4)
 
-```text
-Claude Teams export files
-  -> scripts/analyze.mjs
-  -> public/generated/analytics.json
-  -> public/generated/conversations/{uuid}.json
-  -> React dashboard
-```
+## 📸 How to Export Your Claude Teams Data
 
-The analyzer reads the large `data/conversations.json` file as a top-level JSON stream, one conversation at a time. This avoids loading the full export into memory as one giant object.
+**Step 1 — Go to Organisation Settings → Data and Privacy**
 
-The generated dashboard data is split into two layers:
+![Organisation Settings showing the Data and Privacy section with Export data button](screenshots/org-settings.png)
 
-- `public/generated/analytics.json`: compact summary/index data for the dashboard
-- `public/generated/conversations/{uuid}.json`: one detail file per conversation, loaded only when a conversation is opened
+**Step 2 — Click "Export data" and choose your date range**
 
-This keeps the UI responsive even when the original export is large.
+![Export data modal showing Conversations, Users, and Projects options](screenshots/export-data.png)
 
-## Setup
+You'll receive a download link by email within a few minutes. Extract the ZIP into the `data/` folder and you're ready to go.
 
-Install dependencies:
+---
+
+## 🚀 Quick Start
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/Dipen-Dedania/cluade-teams-analytics.git
+cd cluade-teams-analytics
+
+# 2. Install dependencies
 npm install
-```
 
-Generate analytics from the local export:
+# 3. Place your Claude Teams export files in data/
+#    (see Data Requirements below)
 
-```bash
+# 4. Generate the analytics
 npm run analyze
-```
 
-Run the development server:
-
-```bash
+# 5. Start the dashboard
 npm run dev
 ```
 
-Build the production app:
+Open [http://localhost:3033](http://localhost:3033) — that's it. ✅
+
+> **Don't have a real export yet?** The repo ships with sample data in `sample/`. Copy it to `data/` to explore the dashboard instantly.
+>
+> **macOS / Linux:**
+>
+> ```bash
+> cp -r sample/* data/
+> npm run analyze && npm run dev
+> ```
+>
+> **Windows (PowerShell):**
+>
+> ```powershell
+> Copy-Item -Recurse sample\* data\
+> npm run analyze; npm run dev
+> ```
+
+---
+
+## 📋 What the Dashboard Shows
+
+| Section                       | Details                                                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Team Overview**             | Total conversations, messages, active vs. inactive users, files uploaded, tool calls                               |
+| **Conversation Activity**     | Daily / monthly chart with conversation volume over time                                                           |
+| **Hourly & Weekday Heatmaps** | When is your team most productive?                                                                                 |
+| **Topic Breakdown**           | Auto-classified into Backend, Frontend, Design, DevOps, Data & BI, Mobile, Writing, Code Review, Product, Learning |
+| **User Drilldowns**           | Per-user stats: message counts, prompt length, active days, topics, first/last activity                            |
+| **Conversation Viewer**       | Browse every message in a conversation, including attachments and tool results                                     |
+| **File Analytics**            | Most uploaded file types and file names across all conversations                                                   |
+| **Project Summaries**         | All Claude Projects with doc counts, prompt templates, and creator info                                            |
+| **Design Chats**              | Claude design chat history with attachment counts                                                                  |
+| **Memories**                  | All saved memories in one place                                                                                    |
+
+---
+
+## 📁 Data Requirements
+
+Place your extracted Claude Teams export in the `data/` folder:
+
+```
+data/
+├── conversations.json      ← required
+├── users.json              ← required
+├── memories.json           ← optional
+├── projects/
+│   └── *.json              ← optional
+└── design_chats/
+    └── *.json              ← optional
+```
+
+The dashboard degrades gracefully if optional files are missing. `conversations.json` and `users.json` are the primary sources.
+
+---
+
+## 🏗 Project Structure
+
+```
+claude-teams-analytics/
+├── data/                   ← your Claude Teams export goes here (gitignored)
+├── sample/                 ← demo data for trying the app without a real export
+├── scripts/
+│   ├── analyze.mjs         ← reads data/, writes public/generated/
+│   └── serve.mjs           ← production static server
+├── src/
+│   ├── main.jsx            ← React app entry point
+│   └── styles.css          ← all styles
+├── public/
+│   └── generated/          ← output of analyze.mjs (gitignored)
+│       ├── analytics.json
+│       └── conversations/
+│           └── {uuid}.json
+└── dist/                   ← production build output (gitignored)
+```
+
+---
+
+## ⚙️ All Commands
+
+| Command           | Description                                           |
+| ----------------- | ----------------------------------------------------- |
+| `npm install`     | Install dependencies                                  |
+| `npm run analyze` | Process `data/` and generate `public/generated/`      |
+| `npm run dev`     | Start Vite dev server on port 3033                    |
+| `npm run build`   | Analyze + build production bundle                     |
+| `npm run serve`   | Serve the production build at `http://127.0.0.1:4173` |
 
 ```bash
-npm run build
+# Run dev on a custom port
+npm run dev -- --port 5000
 ```
 
-Serve the built app locally:
+---
+
+## 🔬 How It Works
+
+```
+Claude Teams Export (ZIP)
+  └─▶ data/
+        └─▶ scripts/analyze.mjs   (streaming JSON parser — memory efficient)
+              └─▶ public/generated/analytics.json         (summary + index)
+              └─▶ public/generated/conversations/{uuid}.json  (one per conversation)
+                    └─▶ React Dashboard (Vite + React 19)
+```
+
+The analyzer **streams** `conversations.json` one object at a time using a custom character-level JSON parser. This means it handles exports with tens of thousands of conversations without running out of memory.
+
+The generated data is intentionally split:
+
+- **`analytics.json`** — compact index loaded on startup
+- **`conversations/{uuid}.json`** — full message text loaded only when you open a conversation
+
+This keeps the dashboard snappy regardless of export size.
+
+---
+
+## 🔒 Privacy
+
+> **Your data never leaves your machine.**
+
+Claude Teams exports contain sensitive business information — code, customer details, uploaded file names, and user email addresses. This project is designed with that in mind:
+
+- ✅ All processing happens locally via Node.js
+- ✅ No external API calls, no telemetry, no tracking
+- ✅ `data/` and `public/generated/` are `.gitignore`d by default
+- ✅ `dist/` is excluded to prevent accidentally publishing generated data
+- ⚠️ Review screenshots before sharing — they may show real names or emails
+- ⚠️ Never commit your `data/` folder to a public repository
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here are some good ways to help:
+
+- 🐛 **Bug reports** — open an issue with steps to reproduce
+- 💡 **Feature ideas** — open a discussion or issue
+- 🔧 **PRs** — fix bugs, improve the UI, add new metrics
 
 ```bash
-npm run serve
+# Fork and clone, then:
+git checkout -b feature/my-improvement
+npm install && npm run dev
+# Make your changes, then open a PR
 ```
 
-By default, the production server uses:
+Please use sample/mock data (not real exports) when submitting screenshots or test cases.
 
-```text
-http://127.0.0.1:4173
-```
+---
 
-The development server uses Vite and can be configured with a port:
+## ⚡ Known Limitations
 
-```bash
-npm run dev -- --port 3033
-```
+| Limitation                           | Status                                                                                         |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Single export folder at a time       | Planned: multi-export support ([docs/multiple-exports-plan.md](docs/multiple-exports-plan.md)) |
+| Keyword-based topic detection        | Planned: optional semantic clustering                                                          |
+| No persistent database               | Planned                                                                                        |
+| No authentication or hosted backend  | By design for local-first privacy                                                              |
+| Overlapping exports not deduplicated | Planned                                                                                        |
 
-## Data Requirements
+---
 
-Place an extracted Claude Teams export in the `data/` folder.
+## 📄 License
 
-Expected files:
+[MIT](./LICENSE) — free to use, modify, and distribute.
 
-```text
-data/conversations.json
-data/users.json
-data/projects/*.json
-data/design_chats/*.json
-data/memories.json
-```
+---
 
-The dashboard can still work if some optional folders are missing, but `conversations.json` and `users.json` are the primary files.
+<div align="center">
 
-## Developer Notes
+If this saved you time, please consider giving it a ⭐ — it helps others find the project!
 
-### Analyzer
+**[⭐ Star on GitHub](https://github.com/Dipen-Dedania/cluade-teams-analytics)**
 
-The main analyzer lives in:
-
-```text
-scripts/analyze.mjs
-```
-
-It calculates:
-
-- global summary metrics
-- user-level aggregates
-- conversation index rows
-- topic buckets
-- file extension/name counts
-- project summaries
-- design chat summaries
-- per-conversation detail chunks
-
-The analyzer currently uses simple local heuristics for topic detection. It does not call an LLM or external API.
-
-### Frontend
-
-The React app lives in:
-
-```text
-src/main.jsx
-src/styles.css
-```
-
-The UI fetches:
-
-```text
-/generated/analytics.json
-```
-
-When opening a conversation, it fetches:
-
-```text
-/generated/conversations/{conversationUuid}.json
-```
-
-This is intentional. The full message text is kept out of the main dashboard payload.
-
-### Generated Files
-
-Generated analytics files are ignored by Git:
-
-```text
-public/generated/
-dist/
-```
-
-This helps avoid accidentally committing private team chat data.
-
-## Privacy Notes
-
-Claude Teams exports can contain sensitive business information, code, customer details, uploaded file names, and user email addresses.
-
-Before publishing, sharing, or deploying this project:
-
-- Do not commit `data/`
-- Do not commit `public/generated/`
-- Do not commit `dist/` if it contains generated data
-- Review screenshots before sharing them
-- Consider adding sample/mock export data for public demos
-
-## Open Source Readiness
-
-This project is a good candidate for open source, with one important caveat: the export data is private and must never be included in the repository.
-
-Recommended open-source steps:
-
-- Add a clear license, such as MIT or Apache-2.0
-- Add sanitized sample data under `sample-data/`
-- Add a `data/.gitkeep` file and keep real exports ignored
-- Document supported Claude export formats
-- Add screenshots using fake/mock data
-- Add a privacy/security section
-- Add contribution guidelines once the structure stabilizes
-
-## Current Limitations
-
-- The app currently analyzes one extracted export folder at a time.
-- Topic detection is keyword-based, not semantic clustering.
-- There is no persistent database yet.
-- There is no authentication or hosted backend.
-- Multiple overlapping exports are not deduplicated yet.
-
-For the planned multi-export backend direction, see:
-
-```text
-docs/multiple-exports-plan.md
-```
-
+</div>

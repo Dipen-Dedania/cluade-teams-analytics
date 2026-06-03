@@ -1,0 +1,134 @@
+[
+    {
+        "uuid": "11111111-1111-4111-8111-111111111111",
+        "full_name": "Alice Example",
+        "email_address": "alice@example.com",
+        "verified_phone_number": "+12025550123"
+    },
+    {
+        "uuid": "22222222-2222-4222-8222-222222222222",
+        "full_name": "Bob Sample",
+        "email_address": "bob@example.com",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "33333333-3333-4333-8333-333333333333",
+        "full_name": "Carol Demo",
+        "email_address": "carol@example.com",
+        "verified_phone_number": "+441632960960"
+    },
+    {
+        "uuid": "44444444-4444-4444-8444-444444444444",
+        "full_name": "Dan Test",
+        "email_address": "dan@test.com",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "55555555-5555-4555-8555-555555555555",
+        "full_name": "Eve Mock",
+        "email_address": "eve@mock.com",
+        "verified_phone_number": "+918123456789"
+    },
+    {
+        "uuid": "66666666-6666-4666-8666-666666666666",
+        "full_name": "Frank Rivera",
+        "email_address": "frank.rivera@acme.io",
+        "verified_phone_number": "+14155550192"
+    },
+    {
+        "uuid": "77777777-7777-4777-8777-777777777777",
+        "full_name": "Grace Kim",
+        "email_address": "grace.kim@acme.io",
+        "verified_phone_number": "+14155550193"
+    },
+    {
+        "uuid": "88888888-8888-4888-8888-888888888888",
+        "full_name": "Henry Zhao",
+        "email_address": "henry.zhao@globaltech.com",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "99999999-9999-4999-8999-999999999999",
+        "full_name": "Isabelle Martin",
+        "email_address": "isabelle.martin@globaltech.com",
+        "verified_phone_number": "+33612345678"
+    },
+    {
+        "uuid": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+        "full_name": "James Okafor",
+        "email_address": "james.okafor@buildco.ng",
+        "verified_phone_number": "+2348012345678"
+    },
+    {
+        "uuid": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+        "full_name": "Kira Svensson",
+        "email_address": "kira.svensson@nordic.se",
+        "verified_phone_number": "+46701234567"
+    },
+    {
+        "uuid": "cccccccc-cccc-4ccc-8ccc-cccccccccccc",
+        "full_name": "Liam Patel",
+        "email_address": "liam.patel@venture.in",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "dddddddd-dddd-4ddd-8ddd-dddddddddddd",
+        "full_name": "Mia Nguyen",
+        "email_address": "mia.nguyen@startupvn.vn",
+        "verified_phone_number": "+84901234567"
+    },
+    {
+        "uuid": "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee",
+        "full_name": "Noah Fischer",
+        "email_address": "noah.fischer@devhaus.de",
+        "verified_phone_number": "+491701234567"
+    },
+    {
+        "uuid": "ffffffff-ffff-4fff-8fff-ffffffffffff",
+        "full_name": "Olivia Santos",
+        "email_address": "olivia.santos@inovatech.br",
+        "verified_phone_number": "+5511987654321"
+    },
+    {
+        "uuid": "abababab-abab-4aba-8aba-abababababab",
+        "full_name": "Pedro Alvarez",
+        "email_address": "pedro.alvarez@inovatech.br",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "cdcdcdcd-cdcd-4cdc-8cdc-cdcdcdcdcdcd",
+        "full_name": "Quinn Park",
+        "email_address": "quinn.park@nexus.kr",
+        "verified_phone_number": "+821012345678"
+    },
+    {
+        "uuid": "efefefef-efef-4efe-8efe-efefefefefef",
+        "full_name": "Rachel Osei",
+        "email_address": "rachel.osei@afridev.gh",
+        "verified_phone_number": "+233501234567"
+    },
+    {
+        "uuid": "12121212-1212-4121-8121-121212121212",
+        "full_name": "Sam Tanner",
+        "email_address": "sam.tanner@cloudbase.us",
+        "verified_phone_number": "+13125550147"
+    },
+    {
+        "uuid": "34343434-3434-4343-8343-343434343434",
+        "full_name": "Tina Larsson",
+        "email_address": "tina.larsson@nordic.se",
+        "verified_phone_number": "+46721234567"
+    },
+    {
+        "uuid": "56565656-5656-4565-8565-565656565656",
+        "full_name": "Uma Chandra",
+        "email_address": "uma.chandra@techbridge.in",
+        "verified_phone_number": null
+    },
+    {
+        "uuid": "78787878-7878-4787-8787-787878787878",
+        "full_name": "Victor Durand",
+        "email_address": "victor.durand@pariscode.fr",
+        "verified_phone_number": "+33698765432"
+    }
+]

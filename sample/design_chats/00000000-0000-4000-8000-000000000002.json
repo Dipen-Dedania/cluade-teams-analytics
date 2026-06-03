@@ -1,0 +1,21 @@
+{
+  "uuid": "00000000-0000-4000-8000-000000000002",
+  "title": "Second Sample Chat",
+  "project": { "uuid": "proj-0001", "name": "Sample Project" },
+  "created_at": "2026-05-22T09:00:00.000Z",
+  "updated_at": "2026-05-22T09:10:00.000Z",
+  "messages": [
+    {
+      "uuid": "msg-1001",
+      "role": "user",
+      "content": { "role": "user", "content": "Please review these mockups.", "attachments": [{ "id": "att-2", "name": "mockup1.png", "type": "image/png" }] },
+      "created_at": "2026-05-22T09:00:10.000Z"
+    },
+    {
+      "uuid": "msg-1002",
+      "role": "assistant",
+      "content": { "role": "assistant", "content": "I updated spacing and exported assets." },
+      "created_at": "2026-05-22T09:05:00.000Z"
+    }
+  ]
+}
