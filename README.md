@@ -32,7 +32,7 @@ All powered by your own export. No cloud. No API keys. No data sent anywhere.
 
 ## Demo
 
-![Demo](demo.mp4)
+<video src="./demo.mp4" controls></video>
 
 ## 📸 How to Export Your Claude Teams Data
 
